@@ -1,4 +1,4 @@
-package com.ten_questions;
+package com.tenquestions;
 
 import java.util.Scanner;
 
