@@ -18,12 +18,10 @@ public class ConstructorNewInstance {
     }
 
     public static void main(String[] args) {
-
         try {
 
             // Getting Constructor object
             Constructor<ConstructorNewInstance> constructor =ConstructorNewInstance.class.getDeclaredConstructor();
-
             // Creating object using Constructor.newInstance()
             ConstructorNewInstance obj =constructor.newInstance();
 

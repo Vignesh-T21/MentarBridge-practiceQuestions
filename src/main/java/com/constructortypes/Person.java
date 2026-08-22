@@ -4,26 +4,18 @@ public class Person {
 
     private String personName;
     private int age;
-    static String city="karur";
 
-
-    //constructor name and class name must be same
-    //used to initialize object variables
-    //No argument Constructor
     public Person() {
         System.out.println("No argument constructor is called");
-        this.personName = "Vignesh";
-        this.age = 21;
     }
 
-    //Parameterized Constructor
+
     public Person(String personName, int age) {
         System.out.println("Parameterized constructor is called");
         this.personName = personName;
         this.age = age;
     }
 
-    //Copy Constructor
     public Person(Person obj) {
         System.out.println("Copy constructor is called");
         this.personName = obj.personName;
@@ -32,12 +24,8 @@ public class Person {
 
     public static void main(String[] args) {
 
-
-        // this keyword refers current object
         //calling no argument constructor
         Person person1 = new Person();
-        System.out.println("Name: " + person1.personName);
-        System.out.println("Age: " + person1.age);
 
 
 
