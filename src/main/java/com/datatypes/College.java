@@ -35,6 +35,7 @@ public class College {
         short c = 5;
         System.out.println(c * 3);
 
+        Integer numb;
 
         // int
         System.out.println("Int Data type");
