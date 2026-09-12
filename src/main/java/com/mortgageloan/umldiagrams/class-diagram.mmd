@@ -1,0 +1,53 @@
+classDiagram
+
+    class Loan {
+        <<abstract>>
+        -double loanAmount
+        -int tenure
+        +calculateLoan()
+        +calculateEMI()
+        +calculateEMI(rate)
+        +calculateInterestRate()
+    }
+
+    class HomeLoan {
+        -double propertyValue
+        +calculateLoan()
+        +verifyIncome()
+        +checkCreditScore()
+    }
+
+    class PropertyLoan {
+        -double landValue
+        +calculateLoan()
+        +verifyIncome()
+        +checkCreditScore()
+    }
+
+    class Verifiable {
+        <<interface>>
+        +verifyIncome()
+        +checkCreditScore()
+        +verificationMessage()
+    }
+
+    class Customer {
+        -String name
+        -int age
+        -IncomeDetails incomeDetails
+        +displayDetails()
+    }
+
+    class IncomeDetails {
+        -String job
+        -double monthlyIncome
+        +displayIncome()
+    }
+
+    Loan <|-- HomeLoan : extends
+    Loan <|-- PropertyLoan : extends
+
+    HomeLoan ..|> Verifiable : implements
+    PropertyLoan ..|> Verifiable : implements
+
+    Customer "1" --> "1" IncomeDetails : HAS-A

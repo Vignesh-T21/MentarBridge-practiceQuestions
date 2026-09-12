@@ -1,6 +1,47 @@
 package com.relation;
 
+
+/**
+ * Main class of the Vehicle Rental Management System.
+ *
+ * <p>This class demonstrates how the different classes in the
+ * rental management system work together.</p>
+ *
+ * <p>The system demonstrates the following OOP relationships:</p>
+ *
+ * <ul>
+ *     <li>Car IS-A Vehicle</li>
+ *     <li>Bike IS-A Vehicle</li>
+ *     <li>Truck IS-A Vehicle</li>
+ *     <li>Customer HAS-A Address</li>
+ *     <li>Rental HAS-A Customer</li>
+ *     <li>Rental HAS-A Vehicle</li>
+ * </ul>
+ *
+ * <p>It also demonstrates inheritance, method overriding,
+ * polymorphism, and object relationships.</p>
+ *
+ * @author vignesh
+ */
 public class RentalManagementSystem {
+    /**
+     * Creates a new RentalManagementSystem object.
+     */
+    public RentalManagementSystem() {
+    }
+
+    /**
+     * Entry point of the Vehicle Rental Management System.
+     *
+     * <p>This method creates Address, Customer, Vehicle, and Rental
+     * objects and displays their details.</p>
+     *
+     * <p>The method also demonstrates polymorphism by storing
+     * {@link Car}, {@link Bike}, and {@link Truck} objects in
+     * {@link Vehicle} references.</p>
+     *
+     * @param args command-line arguments
+     */
     public static void main(String[] args) {
 
         System.out.println("========================================");

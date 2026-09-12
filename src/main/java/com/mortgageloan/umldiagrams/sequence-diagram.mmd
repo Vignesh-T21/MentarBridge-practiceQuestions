@@ -1,0 +1,22 @@
+sequenceDiagram
+
+    actor Customer
+    participant MortgageDemo
+    participant Loan
+    participant Verifiable
+
+    Customer->>MortgageDemo: Enter Details
+
+    MortgageDemo->>Loan: Create Loan
+
+    MortgageDemo->>Loan: calculateLoan()
+
+    MortgageDemo->>Loan: calculateEMI()
+
+    MortgageDemo->>Verifiable: verifyIncome()
+
+    MortgageDemo->>Verifiable: checkCreditScore()
+
+    MortgageDemo->>Verifiable: verificationMessage()
+
+    MortgageDemo-->>Customer: Loan Approved
